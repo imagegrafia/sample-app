@@ -1,0 +1,21 @@
+<!-- Table -->
+<div class="container mt-5">
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">First</th>
+            <th scope="col">Last</th>
+            <th scope="col">Handle</th>
+          </tr>
+        </thead>
+        <tbody>
+         
+          <tr *ngFor="let prod of products">
+            <td>{{prod?.name | uppercase }}</td>
+            <td>{{prod?.price }}</td>
+        </tr>
+        </tbody>
+
+      </table>
+    </div> 
