@@ -1,0 +1,7 @@
+<p>home works!</p>
+
+<ol >
+    <li *ngFor="let route of appRoute$ | async">
+        <a routerLink="{{'/' + route?.path}}">{{route?.path}} | {{route?.component?.name}}</a>
+    </li>
+</ol>
