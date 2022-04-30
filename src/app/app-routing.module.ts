@@ -4,12 +4,14 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { ShopComponent } from './shop/shop.component';
 import { UserCardComponent } from './user-card/user-card.component';
+import { UserTableComponent } from './user-table/user-table.component';
 
 const routes: Routes = [
   {path: 'home',component: HomeComponent},
   {path: 'shop',component: ShopComponent},
   {path: 'login',component: LoginComponent},
   {path: 'user',component: UserCardComponent},
+  {path: 'user-table', component: UserTableComponent},
   
 ];
 

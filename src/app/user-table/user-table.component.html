@@ -1,21 +1,26 @@
 <!-- Table -->
 <div class="container mt-5">
-    <table class="table">
+    <table class="table table-responsive-sm table-hover table-bordered">
         <thead>
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">First</th>
-            <th scope="col">Last</th>
-            <th scope="col">Handle</th>
+          <tr class="table-dark text-center">
+            <th scope="col">Sl.</th>
+            <th scope="col">Name</th>
+            <th scope="col">Email Id</th>
+            <th scope="col">Password</th>
+            <th scope="col">Edit</th>
+            <th scope="col">Delete</th>
           </tr>
         </thead>
         <tbody>
-         
-          <tr *ngFor="let prod of products">
-            <td>{{prod?.name | uppercase }}</td>
-            <td>{{prod?.price }}</td>
-        </tr>
+          <tr *ngFor="let prod of users" class="text-center">
+            <td>{{prod?.sl | uppercase }}</td>
+            <td>{{prod?.name }}</td>
+            <td>{{prod?.email }}</td>
+            <td>{{prod?.pass }}</td>
+            <td><a href="#" class="button">Edit</a></td>
+            <td><a href="#" class="button">Delete</a></td>
+          </tr>
         </tbody>
 
-      </table>
-    </div> 
+    </table>
+</div> 
