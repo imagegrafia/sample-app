@@ -9,6 +9,7 @@ import { LoginComponent } from './login/login.component';
 import { UserTableComponent } from './user-table/user-table.component';
 import { UserCardComponent } from './user-card/user-card.component';
 import { RegisterComponent } from './register/register.component';
+import { CarouselComponent } from './carousel/carousel.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { RegisterComponent } from './register/register.component';
     LoginComponent,
     UserTableComponent,
     UserCardComponent,
-    RegisterComponent
+    RegisterComponent,
+    CarouselComponent
   ],
   imports: [
     BrowserModule,

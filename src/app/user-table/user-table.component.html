@@ -1,6 +1,11 @@
 <!-- Table -->
-<div class="container mt-5">
-    <table class="table table-responsive-sm table-hover table-bordered">
+<div class="mt-5 text-center container">
+<h3>Users Details</h3>
+<hr>
+</div>
+<div class="container">
+  <div class="table-responsive">
+    <table class="table table-hover table-bordered">
         <thead>
           <tr class="table-dark text-center">
             <th scope="col">Sl.</th>
@@ -13,16 +18,19 @@
         </thead>
         <tbody>
           <tr *ngFor="let prod of users" class="text-center">
-            <td>{{prod?.sl | uppercase }}</td>
-            <td>{{prod?.name }}</td>
+            <td>{{prod?.sl}}</td>
+            <td>{{prod?.name | uppercase }}</td>
             <td>{{prod?.email }}</td>
             <td>{{prod?.pass }}</td>
-            <td><a class="btn btn-success" href="#" role="button">Edit</a></td>
-            <td><a class="btn btn-danger" href="#" role="button">Delete</a></td>
+            <td><button class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#edit">Edit</button></td>
+            <td><button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#delete">Delete</button></td>
           </tr>
         </tbody>
     </table>
-    <nav aria-label="Page navigation example">
+  </div>
+
+    <!-- Pagination -->
+    <nav aria-label="Page navigation example mt-5">
       <ul class="pagination">
         <li class="page-item"><a class="page-link" href="#">Previous</a></li>
         <li class="page-item active" aria-current="page">
@@ -33,4 +41,64 @@
         <li class="page-item"><a class="page-link" href="#">Next</a></li>
       </ul>
     </nav>
-</div> 
+    <!-- Pagination End-->
+
+<!--Edit Model Box -->
+<div class="modal fade" id="edit">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="edit">Edit</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div>
+          <form>
+            <div class="mb-3">
+              <label for="Sl" class="form-label">Sl.</label>
+              <input type="text" class="form-control" id="email" placeholder="Sl" disabled>
+            </div>
+            <div class="mb-3">
+              <label for="name" class="form-label">Name</label>
+              <input type="text" class="form-control" id="name" placeholder="Enter Name">
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="email" placeholder="name@example.com">
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label">Password</label>
+              <input type="password" class="form-control" id="password" placeholder="Enter Password">
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-success">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--Edit Model Box End-->
+
+<!--Delete Model Box -->
+<div class="modal fade" id="delete">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="edit">Delete</h5>
+      </div>
+      <div class="modal-body">
+        <div class="mt-3">
+          <p class="center">Are you sure delete (user Name)?</p>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+        <button type="submit" class="btn btn-danger">Yes</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--Delete Model Box End -->
