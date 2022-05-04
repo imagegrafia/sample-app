@@ -10,6 +10,7 @@ import { UserTableComponent } from './user-table/user-table.component';
 import { UserCardComponent } from './user-card/user-card.component';
 import { RegisterComponent } from './register/register.component';
 import { CarouselComponent } from './carousel/carousel.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { CarouselComponent } from './carousel/carousel.component';
     UserTableComponent,
     UserCardComponent,
     RegisterComponent,
-    CarouselComponent
+    CarouselComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

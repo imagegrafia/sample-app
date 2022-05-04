@@ -6,8 +6,10 @@ import { ShopComponent } from './shop/shop.component';
 import { UserCardComponent } from './user-card/user-card.component';
 import { UserTableComponent } from './user-table/user-table.component';
 import { RegisterComponent } from './register/register.component';
+import { BehaviorSubject } from 'rxjs';
+import { SharedService } from './shared.service';
 
-const routes: Routes = [
+export const routes: Routes = [
   {path: 'home',component: HomeComponent},
   {path: 'shop',component: ShopComponent},
   {path: 'login',component: LoginComponent},
@@ -21,4 +23,9 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule { 
+
+  constructor(private sharedService:SharedService){
+    this.sharedService.allAppRoutes.next(routes);
+  }
+}
