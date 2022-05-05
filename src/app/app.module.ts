@@ -11,7 +11,11 @@ import { UserCardComponent } from './user-card/user-card.component';
 import { RegisterComponent } from './register/register.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { HeaderComponent } from './header/header.component';
+<<<<<<< HEAD
 import { NotFoundComponent } from './not-found/not-found.component';
+=======
+import { ReactiveFormsModule } from '@angular/forms';
+>>>>>>> bb3721467e0a1ce76a468d9da8c6164ca392afab
 
 @NgModule({
   declarations: [
@@ -28,7 +32,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

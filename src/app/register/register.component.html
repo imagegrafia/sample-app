@@ -1,2 +1,169 @@
-<p>register works!</p>
-<h1>Hello</h1>
+<div class="container">
+    <!-- show all address -->
+    <!-- <h1>Address </h1> -->
+    <hr>
+    <button class="btn btn-outline-primary" (click)="showAddress = !showAddress">
+        {{ showAddress ? 'Cancel' : '+ Add new Address'}}
+    </button>
+
+<!-- // Validation message -->
+    <div class="validation">
+        <div *ngIf="name?.invalid && (name?.dirty || name?.touched)" class="alert alert-danger">
+            <div *ngIf="name?.errors?.['required']">
+                *Name is required.
+            </div>
+        </div>
+
+        <div *ngIf="primaryMobile?.invalid && (primaryMobile?.dirty || primaryMobile?.touched)"
+            class="alert alert-danger">
+            <div *ngIf="primaryMobile?.errors?.['required']">
+                *primaryMobile is required.
+            </div>
+            <div *ngIf="primaryMobile?.errors">
+                *invalid primary Mobile number 10 digit only.
+            </div>
+        </div>
+        <div *ngIf="landmark?.invalid && (landmark?.dirty || landmark?.touched)" class="alert alert-danger">
+            <div *ngIf="landmark?.errors?.['required']">
+                *landmark is required.
+            </div>
+        </div>
+        <div *ngIf="addressLine?.invalid && (addressLine?.dirty || addressLine?.touched)" class="alert alert-danger">
+            <div *ngIf="addressLine?.errors?.['required']">
+                *addressLine is required.
+            </div>
+        </div>
+        <div *ngIf="pincode?.invalid && (pincode?.dirty || pincode?.touched)" class="alert alert-danger">
+            <div *ngIf="pincode?.errors?.['required']">
+                *pincode is required.
+            </div>
+        </div>
+        <div *ngIf="city?.invalid && (city?.dirty || city?.touched)" class="alert alert-danger">
+            <div *ngIf="city?.errors?.['required']">
+                *city is required.
+            </div>
+        </div>
+        <div *ngIf="state?.invalid && (state?.dirty || state?.touched)" class="alert alert-danger">
+            <div *ngIf="state?.errors?.['required']">
+                *state is required.
+            </div>
+        </div>
+        <div *ngIf="country?.invalid && (country?.dirty || country?.touched)" class="alert alert-danger">
+            <div *ngIf="country?.errors?.['required']">
+                *country is required.
+            </div>
+        </div>
+        <div *ngIf="alternateLandmark?.invalid && (alternateLandmark?.dirty || alternateLandmark?.touched)"
+            class="alert alert-danger">
+            <div *ngIf="alternateLandmark?.errors?.['required']">
+                *alternateLandmark is required.
+            </div>
+        </div>
+        <div *ngIf="alternateMobile?.invalid && (alternateMobile?.dirty || alternateMobile?.touched)"
+            class="alert alert-danger">
+            <div *ngIf="alternateMobile?.errors?.['required']">
+                *alternateMobile is required.
+            </div>
+        </div>
+    </div>
+    <!-- //Address Form -->
+    <div class="address-form" *ngIf="showAddress ">
+        <form [formGroup]="addressForm" autocomplete="on" (ngSubmit)="onSubmit()" novalidate>
+            <div class="row p-2">
+                <div class="col">
+                    <input type="text" class="form-control rounded-0" placeholder="Name" formControlName="name">
+                </div>
+                <div class="col">
+                    <input type="text" class="form-control rounded-0" placeholder="Primary Mobile"
+                        formControlName="primaryMobile">
+                </div>
+            </div>
+            <div class="row p-2">
+                <div class="col">
+                    <input type="text" class="form-control rounded-0" placeholder="pincode" formControlName="pincode">
+                </div>
+                <div class="col">
+                    <input type="text" class="form-control rounded-0" placeholder="landmark" formControlName="landmark">
+                </div>
+            </div>
+            <div class="row p-2">
+                <div class="col">
+                    <textarea cols="10" class="form-control rounded-0" placeholder="Address Line 1"
+                        formControlName="addressLine"></textarea>
+                </div>
+            </div>
+            <div class="row p-2">
+                <div class="col">
+                    <input type="text" class="form-control rounded-0" placeholder="City/District"
+                        formControlName="city">
+                </div>
+                <div class="col">
+                    <select class="form-control select rounded-0" placeholder="--Select State--"
+                        formControlName="state">
+                        <option value="">--Select State--</option>
+                        <option value="BIHAR" selected>Bihar</option>
+
+                    </select>
+                </div>
+                <div class="col">
+                    <select class="form-control select rounded-0" placeholder="--Select Country--"
+                        formControlName="country">
+                        <option value="">--Select Country--</option>
+                        <option value="India" selected>India</option>
+
+                    </select>
+                </div>
+            </div>
+            <div class="row p-2">
+                <div class="col">
+                    <input type="text" class="form-control rounded-0" placeholder="Landmark (optional)"
+                        formControlName="alternateLandmark">
+                </div>
+                <div class="col">
+                    <input type="text" class="form-control rounded-0" placeholder="Alternate Phone Number (optional)"
+                        formControlName="alternateMobile">
+                </div>
+            </div>
+            <div class="row p-2">
+                <div class="col">
+                    <!-- <button type="button" class="btn btn-outline mr-3 p-1" (click)="toggleAddressForm.class = toggleAddressForm.class == 'showChildren' ? '' :  'showChildren'">Cancel</button> -->
+
+                    <input type="submit" value="Save" class="btn btn-primary btn-lg btn-block "
+                        [disabled]="!addressForm.valid">
+                    <input type="button" value="Reset" class="btn btn-text text-danger " (click)="onResetAddressForm()">
+
+                </div>
+
+            </div>
+        </form>
+
+
+    </div>
+    
+
+    <div class="list-group ">
+        <div class="">
+            <button class="btn btn-text-link float-right text-danger" (click)="onDeleteAddress()">X</button>
+            <button class="btn btn-text-link float-right text-primary" (click)="onEditAddress()">Edit</button>
+        </div>
+        <div class="address-card" *ngFor="let address of (address$ | async)">
+            <div class="list-group-item d-flex gap-2">
+                <input class="form-check-input flex-shrink-0" type="radio" [value]="address"
+                    (change)="handleSelectedAddress(address)" name="address-group">
+
+                <span>
+                    {{address.name }} <i> &nbsp; {{address.primaryMobile}}</i>
+                    <small class="d-block text-muted">{{address.addressLine}} </small>
+                    <small> {{address?.landmark+' '+address?.city+' '+address?.state+' '+address?.country}}
+                        {{address.pincode}}</small>
+
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+    
+
+</div>
