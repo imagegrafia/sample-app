@@ -11,6 +11,7 @@ import { UserCardComponent } from './user-card/user-card.component';
 import { RegisterComponent } from './register/register.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { HeaderComponent } from './header/header.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { HeaderComponent } from './header/header.component';
     UserCardComponent,
     RegisterComponent,
     CarouselComponent,
-    HeaderComponent
+    HeaderComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,

@@ -8,6 +8,7 @@ import { UserTableComponent } from './user-table/user-table.component';
 import { RegisterComponent } from './register/register.component';
 import { BehaviorSubject } from 'rxjs';
 import { SharedService } from './shared.service';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 export const routes: Routes = [
   {path: 'home',component: HomeComponent},
@@ -16,6 +17,7 @@ export const routes: Routes = [
   {path: 'user',component: UserCardComponent},
   {path: 'user-table', component: UserTableComponent},
   {path: 'register', component: RegisterComponent},
+  {path: '**', component: NotFoundComponent},
   
 ];
 
