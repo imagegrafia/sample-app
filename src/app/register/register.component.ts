@@ -51,7 +51,7 @@ export class RegisterComponent implements OnInit {
   }
   onSubmit() {
     // this.loaderService.showProgressBar();
-    console.log(JSON.stringify(this.addressForm.value));
+    console.log(JSON.stringify(this.addressForm.value,null,2));
     // if (this.selectedAddressId > 0) {
     //   this.updateAddress();
     // } else {
