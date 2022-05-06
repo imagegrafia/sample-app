@@ -17,6 +17,7 @@ import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { ProductComponent } from './product/product.component';
 import { StepperComponent } from './stepper/stepper.component';
+import { LeftSlideComponent } from './left-slide/left-slide.component';
 
 
 @NgModule({
@@ -33,6 +34,7 @@ import { StepperComponent } from './stepper/stepper.component';
     NotFoundComponent,
     ProductComponent,
     StepperComponent,
+    LeftSlideComponent,
   ],
   imports: [
     BrowserModule,
