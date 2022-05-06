@@ -13,6 +13,10 @@ import { CarouselComponent } from './carousel/carousel.component';
 import { HeaderComponent } from './header/header.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
+import { ProductComponent } from './product/product.component';
+
 
 @NgModule({
   declarations: [
@@ -25,12 +29,16 @@ import { ReactiveFormsModule } from '@angular/forms';
     RegisterComponent,
     CarouselComponent,
     HeaderComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    ProductComponent,
   ],
   imports: [
     BrowserModule,
+    CommonModule,
+    HttpClientModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+   
   ],
   providers: [],
   bootstrap: [AppComponent]
