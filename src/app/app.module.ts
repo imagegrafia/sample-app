@@ -16,6 +16,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { ProductComponent } from './product/product.component';
+import { StepperComponent } from './stepper/stepper.component';
 
 
 @NgModule({
@@ -31,6 +32,7 @@ import { ProductComponent } from './product/product.component';
     HeaderComponent,
     NotFoundComponent,
     ProductComponent,
+    StepperComponent,
   ],
   imports: [
     BrowserModule,
