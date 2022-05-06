@@ -28,6 +28,7 @@
     height: 90vh;
     overflow-y: scroll;
     background-color: rgb(231, 222, 222);
+    transition: height, all 0.2s linear;
 }
 
 .navigation-list-item:hover {
