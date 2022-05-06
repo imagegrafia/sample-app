@@ -50,10 +50,10 @@
 }
 
 .navigation-link:hover {
-    color: rgb(255, 255, 255);
+    color: rgb(23, 36, 226);
 }
 
-.navigation-list-item.active .navigation-link {
+.navigation-list-item .active .navigation-link {
     color: rgb(236, 82, 20);
 }
 
@@ -65,4 +65,29 @@
     font-size: 16px;
     background-color: transparent;
     color: 0, 0, 0, 0.8;
+}
+
+
+
+/*-------------------------------- Dekstop And Laptops -----------*/
+
+@media (min-width: 1024px) {
+
+}
+/*-------------------------------- Tablet and iPads -----------*/
+
+@media (min-width: 769px) and (max-width: 1023px) {
+
+}
+
+/*-------------------------------- Mobile Phone -----------*/
+
+@media (max-width: 768px) {
+    .sidebar-body {
+        width: 100%;
+    }
+}
+
+@media (max-width: 468px) {
+    
 }
