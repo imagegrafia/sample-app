@@ -15,3 +15,5 @@ npm install -g json-server
 json-server --watch mock-data-sample.json
 or 
 json-server --watch mock-data-sample.json --port 4000
+
+//for POST request id parameter is must

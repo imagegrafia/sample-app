@@ -1,6 +1,7 @@
 <!-- Table -->
 <div class="mt-5 text-center container">
 <h3>Users Details</h3>
+<button (click)="addNewUser()">Add User</button>
 <hr>
 </div>
 <div class="container">
@@ -17,12 +18,13 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let prod of users" class="text-center">
-            <td>{{prod?.sl}}</td>
-            <td>{{prod?.name | uppercase }}</td>
-            <td>{{prod?.email }}</td>
-            <td>{{prod?.pass }}</td>
+          <tr *ngFor="let user of users" class="text-center">
+            <td>{{user?.id}}</td>
+            <td>{{user?.name | uppercase }}</td>
+            <td>{{user?.email }}</td>
+            <td>{{user?.pass }}</td>
             <td><button class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#edit">Edit</button></td>
+            <!-- <td><button class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#edit">Edit</button></td> -->
             <td><button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#delete">Delete</button></td>
           </tr>
         </tbody>

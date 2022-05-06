@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from '../services/user.service';
 
 @Component({
   selector: 'app-user-table',
@@ -6,21 +7,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./user-table.component.scss']
 })
 export class UserTableComponent implements OnInit {
-  users =[ 
-    {name:"Krishna Kumar", email :"demo@gmail.com", pass:"Ke@5445", sl:"1"},
-    {name:"Ramesh Sharma", email :"demo@gmail.com", pass:"Ke@5445", sl:"2"},
-    {name:"Bahadur Shashtri", email :"demo@gmail.com", pass:"Ke@5445", sl:"3"},
-    {name:"Ranvir Kapoor", email :"demo@gmail.com", pass:"Ke@5445", sl:"4"},
-    {name:"Salman Khan", email :"demo@gmail.com", pass:"Ke@5445", sl:"5"},
-    {name:"Alia Bhatt", email :"demo@gmail.com", pass:"Ke@5445", sl:"6"},
-    {name:"Lorem Dicosta", email :"demo@gmail.com", pass:"Ke@5445", sl:"7"},
-    {name:"Jhohn Donne", email :"demo@gmail.com", pass:"Ke@5445", sl:"8"},
-    {name:"Lalbahadur Shashtri", email:"demo@gmail.com", pass:"Ke@5445", sl:"9"},
-    {name:"Mahatma Gandhi", email:"demo@gmail.com", pass:"Ke@5445", sl:"10"},
-  ]
-  constructor() { }
+  users:any;
+  constructor(private userService: UserService) { }
 
   ngOnInit(): void {
+    this.userService.getUsers().subscribe(resp => this.users = resp)
+  }
+  addNewUser() {
+    let user = {
+      "name": "Ashish Yadhuvanshi",
+      "email": "ashishkvs@gmail.com",
+      "pass": "ash@5445",
+      "id": "10"+Math.random()
+    }
+    this.userService.saveUser(user).subscribe(resp => console.log(resp));
+      
   }
 
 }

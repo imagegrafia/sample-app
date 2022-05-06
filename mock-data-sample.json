@@ -3,37 +3,136 @@
     {
       "name": "Apple laptop",
       "price": 150000,
-      "imageUrl":"https://images.dailyobjects.com/marche/feature-banner/Frosted-hardshell-case-feature-banner-2.jpg?tr=cm-pad_crop,w-768,h-614,dpr-1"
+      "imageUrl": "https://images.dailyobjects.com/marche/feature-banner/Frosted-hardshell-case-feature-banner-2.jpg?tr=cm-pad_crop,w-768,h-614,dpr-1"
     },
     {
       "name": "Dell laptop",
       "price": 20000,
-      "imageUrl":"https://images.unsplash.com/photo-1593642702821-c8da6771f0c6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80"
+      "imageUrl": "https://images.unsplash.com/photo-1593642702821-c8da6771f0c6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80"
     },
     {
       "name": "Lg laptop",
       "price": 4000,
-      "imageUrl":"https://images.unsplash.com/photo-1537498425277-c283d32ef9db?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=878&q=80"
+      "imageUrl": "https://images.unsplash.com/photo-1537498425277-c283d32ef9db?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=878&q=80"
     },
     {
       "name": "Samsung laptop",
       "price": 3000,
-      "imageUrl":"https://images.unsplash.com/photo-1593642632823-8f785ba67e45?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80"
+      "imageUrl": "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80"
     },
     {
       "name": "Dell laptop",
       "price": 10000,
-      "imageUrl":""
+      "imageUrl": ""
     },
     {
       "name": "Lg laptop",
       "price": 20000,
-      "imageUrl":""
+      "imageUrl": ""
     },
     {
       "name": "Samsung laptop",
       "price": 80000,
-      "imageUrl":"https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=815&q=80"
+      "imageUrl": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=815&q=80"
+    }
+  ],
+  "users": [
+    {
+      "name": "Krishna Kumar",
+      "email": "demo@gmail.com",
+      "pass": "Ke@5445",
+      "id": "1"
+    },
+    {
+      "name": "Ramesh Sharma",
+      "email": "demo@gmail.com",
+      "pass": "Ke@5445",
+      "id": "2"
+    },
+    {
+      "name": "Bahadur Shashtri",
+      "email": "demo@gmail.com",
+      "pass": "Ke@5445",
+      "id": "3"
+    },
+    {
+      "name": "Ranvir Kapoor",
+      "email": "demo@gmail.com",
+      "pass": "Ke@5445",
+      "id": "4"
+    },
+    {
+      "name": "Salman Khan",
+      "email": "demo@gmail.com",
+      "pass": "Ke@5445",
+      "id": "5"
+    },
+    {
+      "name": "Alia Bhatt",
+      "email": "demo@gmail.com",
+      "pass": "Ke@5445",
+      "id": "6"
+    },
+    {
+      "name": "Lorem Dicosta",
+      "email": "demo@gmail.com",
+      "pass": "Ke@5445",
+      "id": "7"
+    },
+    {
+      "name": "Jhohn Donne",
+      "email": "demo@gmail.com",
+      "pass": "Ke@5445",
+      "id": "8"
+    },
+    {
+      "name": "Lalbahadur Shashtri",
+      "email": "demo@gmail.com",
+      "pass": "Ke@5445",
+      "id": "9"
+    },
+    {
+      "name": "Mahatma Gandhi",
+      "email": "demo@gmail.com",
+      "pass": "Ke@5445",
+      "id": "10"
+    },
+    {
+      "name": "Krishna Kumar",
+      "email": "demo@gmail.com",
+      "pass": "Ke@5445",
+      "id": "1"
+    },
+    {
+      "name": "Ashish Kumar",
+      "email": "demo@gmail.com",
+      "pass": "Ke@5445",
+      "id": "110"
+    },
+    {
+      "name": "Ashish Yadhuvanshi",
+      "email": "ashishkvs@gmail.com",
+      "pass": "ash@5445",
+      "sl": "10",
+      "id": "zBQvbGd"
+    },
+    {
+      "name": "Ashish Yadhuvanshi",
+      "email": "ashishkvs@gmail.com",
+      "pass": "ash@5445",
+      "id": "100.08509336492292952"
+    },
+    {
+      "name": "Ashish Yadhuvanshi",
+      "email": "ashishkvs@gmail.com",
+      "pass": "ash@5445",
+      "id": "100.72310798461552"
+    },
+    {
+      "name": "Ashish Yadhuvanshi",
+      "email": "ashishkvs@gmail.com",
+      "pass": "ash@5445",
+      "id": "100.438978857099972"
     }
   ]
 }
